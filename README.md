@@ -6,9 +6,8 @@
 
 ---
 
-<p align="left">
-  <img src="https://cloud.githubusercontent.com/assets/4659608/14591456/820b43aa-051a-11e6-9c5c-261d7be561d2.png" width="500">
-</p>
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/4659608/14591472/b33d5f8a-051a-11e6-9601-807371433097.png" width="500"></p>
 
 All android developer must have faced force close issue while developing an application.
 Here is a library to catch that errors and treat it elegantly.
