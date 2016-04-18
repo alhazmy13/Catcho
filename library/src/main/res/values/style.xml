@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="CatchoAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/catcho_primary</item>
+        <item name="colorPrimaryDark">@color/catcho_primary_dark</item>
+        <item name="colorAccent">@color/catcho_accent</item>
+    </style>
+
+</resources>

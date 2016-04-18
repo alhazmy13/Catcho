@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="catcho_primary">#FF9800</color>
+    <color name="catcho_primary_dark">#F57C00</color>
+    <color name="catcho_text_light">#FFFFFF</color>
+    <color name="catcho_accent">#607D8B</color>
+    <color name="catcho_text">#212121</color>
+
+</resources>
