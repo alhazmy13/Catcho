@@ -41,6 +41,8 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
         outState.putString(CatchoTags.EMAIL, senderEmail.getText().toString());
         outState.putString(CatchoTags.DESCRIPTION, description.getText().toString());
         outState.putStringArray(CatchoTags.RECIPIENT_EMAIL, recipientEmail);
+        outState.putString(CatchoTags.SMTP_EMAIL,smtpEmail);
+        outState.putString(CatchoTags.PASSWORD,password);
     }
 
     @Override
@@ -52,6 +54,8 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
             title.setText(savedInstanceState.getString(CatchoTags.TITLE));
             description.setText(savedInstanceState.getString(CatchoTags.DESCRIPTION));
             recipientEmail = savedInstanceState.getStringArray(CatchoTags.RECIPIENT_EMAIL);
+            smtpEmail = savedInstanceState.getString(CatchoTags.SMTP_EMAIL);
+            password = savedInstanceState.getString(CatchoTags.PASSWORD);
         }
     }
 
@@ -68,6 +72,9 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
         if (intent != null) {
             mError = intent.getStringExtra(Catcho.ERROR);
             emailMode = (Catcho.EmailMode) intent.getSerializableExtra(CatchoTags.EMAIL_MODE);
+            recipientEmail = intent.getStringArrayExtra(CatchoTags.RECIPIENT_EMAIL);
+            smtpEmail = intent.getStringExtra(CatchoTags.SMTP_EMAIL);
+            password = intent.getStringExtra(CatchoTags.PASSWORD);
             deviceInfo.setText(mError);
 
         }
@@ -90,7 +97,7 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
     private void sendEmailViaIntent() {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL, new String[]{recipientEmail});
+        i.putExtra(Intent.EXTRA_EMAIL, recipientEmail);
         i.putExtra(Intent.EXTRA_SUBJECT, title.getText().toString());
         i.putExtra(Intent.EXTRA_TEXT, description.getText() + "\n" + mError);
         try {

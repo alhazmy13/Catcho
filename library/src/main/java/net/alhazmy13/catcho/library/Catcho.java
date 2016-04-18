@@ -1,5 +1,6 @@
 package net.alhazmy13.catcho.library;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -32,6 +33,9 @@ public class Catcho implements
     public Catcho(Builder builder) {
         context = builder.context;
         emailMode = builder.emailMode;
+        smtpEmail = builder.smtpEmail;
+        recipients = builder.recipients;
+        password = builder.password;
         callingIntent = CatchoReportActivity.getCallingIntent(context.get(),emailMode,recipients,smtpEmail,password);
     }
 
@@ -41,7 +45,7 @@ public class Catcho implements
         String errorReport = CatchoErrorReport.getReport(stackTrace);
 
         callingIntent.putExtra(ERROR, errorReport);
-        context.get().startActivity(callingIntent);
+        ((Activity)context.get()).startActivity(callingIntent);
 
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(10);
@@ -84,7 +88,7 @@ public class Catcho implements
         private WeakReference<Context> context;
 
         private EmailMode emailMode;
-        private String[] email;
+        private String[] recipients;
         private String password;
         private String smtpEmail;
 
@@ -103,20 +107,16 @@ public class Catcho implements
          * @param emailMode the email mode
          * @return the catcho . builder
          */
-        public Catcho.Builder emailMode(EmailMode emailMode) {
-            this.emailMode = emailMode;
-            return this;
-        }
 
         /**
          * Recipients catcho . builder.
          *
-         * @param email the email
+         * @param recipients the email
          * @return the catcho . builder
          */
-        public Catcho.Builder recipients(String... email){
+        public Catcho.Builder recipients(String... recipients){
             this.emailMode = EmailMode.DEFAULT;
-            this.email = email;
+            this.recipients = recipients;
             return this;
         }
 
@@ -127,7 +127,7 @@ public class Catcho implements
          * @param password  the password
          * @return the catcho . builder
          */
-        public Catcho.Builder smtpSender(String smtpEmail,String password){
+        private Catcho.Builder gmailSMTPSenderMode(String smtpEmail,String password){
             this.emailMode = EmailMode.G_MAIL_SENDER;
             this.smtpEmail = smtpEmail;
             this.password = password;

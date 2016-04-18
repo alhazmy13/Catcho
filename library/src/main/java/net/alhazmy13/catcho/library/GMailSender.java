@@ -1,7 +1,13 @@
 package net.alhazmy13.catcho.library;
 
-import android.content.pm.PackageInstaller;
+import android.os.AsyncTask;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.security.Security;
+import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -13,27 +19,22 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.security.Security;
-import java.util.Properties;
 
 
 /**
  * Created by Alhazmy13 on 4/16/16.
  * Catcho
  */
-class GMailSender  extends Authenticator {
+class GMailSender extends Authenticator {
+    static {
+        Security.addProvider(new JSSEProvider());
+    }
+
     private String mailhost = "smtp.gmail.com";
     private String user;
     private String password;
     private Session session;
-
-    static {
-        Security.addProvider(new JSSEProvider());
-    }
+    private MimeMessage message;
 
     /**
      * Instantiates a new G mail sender.
@@ -72,20 +73,51 @@ class GMailSender  extends Authenticator {
      * @param recipients the recipients
      * @throws Exception the exception
      */
-    public synchronized void sendMail(String subject, String body, String sender, String recipients) throws MessagingException {
-        try{
-            MimeMessage message = new MimeMessage(session);
+    public synchronized void sendMail(String subject, String body, String sender, String[] recipients) throws MessagingException {
+        try {
+            message = new MimeMessage(session);
             DataHandler handler = new DataHandler(new ByteArrayDataSource(body.getBytes(), "text/plain"));
             message.setSender(new InternetAddress(sender));
             message.setSubject(subject);
             message.setDataHandler(handler);
-            if (recipients.indexOf(',') > 0)
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipients));
+            String resp = getEmailStrings(recipients);
+            if (resp.indexOf(',') > 0)
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(resp));
             else
-                message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
-            Transport.send(message);
-        }catch(MessagingException e){
+                message.setRecipient(Message.RecipientType.TO, new InternetAddress(resp));
+            new sendEmailOnBackground().execute();
+
+        } catch (MessagingException e) {
             throw e;
+        }
+    }
+
+    private String getEmailStrings(String[] recipients) {
+        StringBuilder sb = new StringBuilder();
+        for (String n : recipients) {
+            if (sb.length() > 0) sb.append(',');
+            sb.append("'").append(n).append("'");
+        }
+        return sb.toString();
+    }
+
+    class sendEmailOnBackground extends AsyncTask<String, String, String> {
+
+        private Exception exception;
+
+        protected String doInBackground(String... urls) {
+            try {
+                Transport.send(message);
+            } catch (MessagingException e) {
+                //e.printStackTrace();
+            }
+
+            return "";
+        }
+
+        protected void onPostExecute() {
+            // TODO: check this.exception
+            // TODO: do something with the feed
         }
     }
 

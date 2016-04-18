@@ -6,12 +6,14 @@
 
 ---
 
-  <img src="https://cloud.githubusercontent.com/assets/4659608/14591472/b33d5f8a-051a-11e6-9601-807371433097.png" width="500">
+<p align="left">
+  <img src="https://cloud.githubusercontent.com/assets/4659608/14591456/820b43aa-051a-11e6-9c5c-261d7be561d2.png" width="500">
+</p>
 
 All android developer must have faced force close issue while developing an application.
-Here is a library to catch that error and treat it elegantly.
+Here is a library to catch that errors and treat it elegantly.
 
-Catcho will create an error page kind of mechanism in your android application.So whenever your application is crashed user will not able to see that irritating pop up dialog. Instead of that app will display a predefined view to the user.
+Catcho will create an error page kind of mechanism in your android application. So whenever your application is crashed user will not able to see that irritating pop up dialog. Instead of that app will display a predefined view to the user.
 
 You can report any issue on issues page. **Note: If you speak Arabic, you can submit issues with Arabic language and I will check them. :)**
 
@@ -32,13 +34,17 @@ dependencies {
 }
 ```
 
-
+##ScreenShots
+<p align="center">
+<img src="https://cloud.githubusercontent.com/assets/4659608/14599362/9b5b58d2-055f-11e6-9e9f-441069877977.gif"></img></p>
 
 # Usage
-Though it is very simple. Copy following line of code in your each (Activity or Application) class just after the call of super method in your overriden onCreate method.
+--
+Though it is very simple. Copy following line of code in your each (Activity or BaseActivity) class, just after the call of super method in your overriden onCreate method.
 
 ```java
-Thread.setDefaultUncaughtExceptionHandler(new Catcho.Builder(this).build());
+        Thread.setDefaultUncaughtExceptionHandler(new Catcho.Builder(this).recipients("your-email@domain.com").build());
+
 ```
 
 Your Activity may look something like this…
@@ -50,7 +56,7 @@ public class AnyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Thread.setDefaultUncaughtExceptionHandler(new Catcho.Builder(this).build());
+        Thread.setDefaultUncaughtExceptionHandler(new Catcho.Builder(this).recipients("your-email@domain.com").build());
 
         setContentView(R.layout.main);
 
@@ -60,11 +66,26 @@ public class AnyActivity extends Activity {
 }
 ```
 
-### Additional Options
+### Comming Soon
+--
+
+`SMTP Service` & `Gmail SMTP Service`
+
+### Theme and Resource
+--
+You can theme the activity by overwriting the color resources as well as you can translate it to any language 
+```xml
+    <color name="catcho_primary">#FF9800</color>
+    <color name="catcho_primary_dark">#F57C00</color>
+    <color name="catcho_text_light">#FFFFFF</color>
+    <color name="catcho_accent">#607D8B</color>
+    <color name="catcho_text">#212121</color>
+```
 
 
 ### Credits 
-
+--
+....
 
 
 ## License
