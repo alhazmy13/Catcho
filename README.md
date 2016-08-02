@@ -29,7 +29,7 @@ You can report any issue on issues page. **Note: If you speak Arabic, you can su
 **Gradle**
 ```gradle
 dependencies {
-	compile 'net.alhazmy13.catcho:library:0.1.0-beta'
+	compile 'net.alhazmy13.Catcho:library:0.1.0-beta'
 }
 ```
 
