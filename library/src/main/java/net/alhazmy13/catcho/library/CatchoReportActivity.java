@@ -10,6 +10,7 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import net.alhazmy13.catcho.library.error.CatchoError;
 import net.alhazmy13.library.R;
 
 import javax.mail.MessagingException;
@@ -18,11 +19,11 @@ import javax.mail.MessagingException;
  * The type Catcho report activity.
  */
 public class CatchoReportActivity extends AppCompatActivity implements View.OnClickListener {
-    private String mError;
+    private CatchoError mError;
     private EditText title, description, deviceInfo, senderEmail;
-    private Catcho.EmailMode emailMode;
+    private CatchoTags.EmailMode emailMode;
     private String[] recipientEmail;
-    private String smtpEmail,password;
+    private String smtpEmail, password;
 
 
     @Override
@@ -36,20 +37,20 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString(CatchoTags.REPORT, mError);
+        outState.putSerializable(CatchoTags.REPORT, mError);
         outState.putString(CatchoTags.TITLE, title.getText().toString());
         outState.putString(CatchoTags.EMAIL, senderEmail.getText().toString());
         outState.putString(CatchoTags.DESCRIPTION, description.getText().toString());
         outState.putStringArray(CatchoTags.RECIPIENT_EMAIL, recipientEmail);
-        outState.putString(CatchoTags.SMTP_EMAIL,smtpEmail);
-        outState.putString(CatchoTags.PASSWORD,password);
+        outState.putString(CatchoTags.SMTP_EMAIL, smtpEmail);
+        outState.putString(CatchoTags.PASSWORD, password);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState != null) {
-            mError = savedInstanceState.getString(CatchoTags.REPORT);
+            mError = (CatchoError) savedInstanceState.getSerializable(CatchoTags.REPORT);
             deviceInfo.setText(savedInstanceState.getString(CatchoTags.REPORT));
             title.setText(savedInstanceState.getString(CatchoTags.TITLE));
             description.setText(savedInstanceState.getString(CatchoTags.DESCRIPTION));
@@ -70,12 +71,12 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
         }
         Intent intent = getIntent();
         if (intent != null) {
-            mError = intent.getStringExtra(Catcho.ERROR);
-            emailMode = (Catcho.EmailMode) intent.getSerializableExtra(CatchoTags.EMAIL_MODE);
+            mError = (CatchoError) intent.getSerializableExtra(Catcho.ERROR);
+            emailMode = (CatchoTags.EmailMode) intent.getSerializableExtra(CatchoTags.EMAIL_MODE);
             recipientEmail = intent.getStringArrayExtra(CatchoTags.RECIPIENT_EMAIL);
             smtpEmail = intent.getStringExtra(CatchoTags.SMTP_EMAIL);
             password = intent.getStringExtra(CatchoTags.PASSWORD);
-            deviceInfo.setText(mError);
+            deviceInfo.setText(mError.toString());
 
         }
 
@@ -121,12 +122,13 @@ public class CatchoReportActivity extends AppCompatActivity implements View.OnCl
     }
 
 
-    public static Intent getCallingIntent(Context context, Catcho.EmailMode emailMode, String[] recipientEmail, String smtpEmail,String password) {
+    public static Intent getCallingIntent(Context context, CatchoTags.EmailMode emailMode, String[] recipientEmail, String smtpEmail, String password, CatchoError errorReport) {
         Intent intent = new Intent(context, CatchoReportActivity.class);
         intent.putExtra(CatchoTags.EMAIL_MODE, emailMode);
         intent.putExtra(CatchoTags.RECIPIENT_EMAIL, recipientEmail);
         intent.putExtra(CatchoTags.SMTP_EMAIL, smtpEmail);
         intent.putExtra(CatchoTags.PASSWORD, password);
+        intent.putExtra(Catcho.ERROR, errorReport);
         return intent;
     }
 }

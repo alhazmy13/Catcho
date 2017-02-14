@@ -7,21 +7,21 @@ import android.widget.Button;
 
 import net.alhazmy13.catcho.library.Catcho;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Thread.setDefaultUncaughtExceptionHandler(new Catcho.Builder(this).recipients("alhazmy15@gmail.com").build());
-        setContentView(R.layout.activity_main);
-        Button exBt = (Button) findViewById(R.id.exceptionBT);
-        assert exBt != null;
-        exBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Integer.parseInt("G");
-            }
-        });
+        Catcho.Builder(this)
+                .activity(CustomActivity.class)
+                .build();
 
+        setContentView(R.layout.activity_main);
+        ((Button) findViewById(R.id.exceptionBT)).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        throw new RuntimeException("");
     }
 }

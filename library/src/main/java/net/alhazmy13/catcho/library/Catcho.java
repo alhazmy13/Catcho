@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import net.alhazmy13.catcho.library.error.CatchoError;
+import net.alhazmy13.catcho.library.error.CatchoErrorParser;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.ref.WeakReference;
@@ -12,136 +15,65 @@ import java.lang.ref.WeakReference;
  * Created by Alhazmy13 on 4/16/16.
  * Catcho
  */
-public class Catcho implements
-        java.lang.Thread.UncaughtExceptionHandler {
-    /**
-     * The constant ERROR.
-     */
-    protected static final String ERROR = "error";
+public class Catcho implements java.lang.Thread.UncaughtExceptionHandler {
+
+    public static final String ERROR = "error";
     private final WeakReference<Context> context;
-    private EmailMode emailMode;
-    private Intent callingIntent;
+    private CatchoTags.EmailMode emailMode;
     private String[] recipients;
     private String smtpEmail;
     private String password;
+    private Class<Activity> mActivity;
 
-    /**
-     * Instantiates a new Catcho.
-     *
-     * @param builder the builder
-     */
-    public Catcho(Builder builder) {
-        context = builder.context;
-        emailMode = builder.emailMode;
-        smtpEmail = builder.smtpEmail;
-        recipients = builder.recipients;
-        password = builder.password;
-        callingIntent = CatchoReportActivity.getCallingIntent(context.get(),emailMode,recipients,smtpEmail,password);
+    public static Catcho Builder(Context context) {
+        return new Catcho(context);
     }
 
+    private Catcho(Context context){
+        this.context = new WeakReference<>(context);
+    }
+
+    public Catcho recipients(String... recipients){
+        this.emailMode = CatchoTags.EmailMode.DEFAULT;
+        this.recipients = recipients;
+        return this;
+    }
+
+    private Catcho gmailSMTPSenderMode(String smtpEmail,String password){
+        this.emailMode = CatchoTags.EmailMode.G_MAIL_SENDER;
+        this.smtpEmail = smtpEmail;
+        this.password = password;
+        return this;
+    }
+
+    public Catcho build() {
+        Thread.setDefaultUncaughtExceptionHandler(this);
+        return this;
+    }
+
+    public <T extends Activity> Catcho activity(Class<T> customActivityClass) {
+        this.mActivity = (Class<Activity>) customActivityClass;
+        return this;
+    }
+
+    @Override
     public void uncaughtException(Thread thread, Throwable exception) {
         StringWriter stackTrace = new StringWriter();
         exception.printStackTrace(new PrintWriter(stackTrace));
-        String errorReport = CatchoErrorReport.getReport(stackTrace);
+        CatchoError errorReport = CatchoErrorParser.getReport(stackTrace);
 
-        callingIntent.putExtra(ERROR, errorReport);
-        ((Activity)context.get()).startActivity(callingIntent);
-
+        if(mActivity != null){
+            (context.get()).startActivity(getCallingIntent(context.get(),errorReport));
+        }else {
+            (context.get()).startActivity(CatchoReportActivity.getCallingIntent(context.get(),emailMode,recipients,smtpEmail,password,errorReport));
+        }
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(10);
     }
 
-
-    /**
-     * The enum Email mode.
-     */
-    public enum EmailMode {
-        /**
-         * G mail sender email mode.
-         */
-        G_MAIL_SENDER(1), /**
-         * Default email mode.
-         */
-        DEFAULT(2);
-
-        private final int value;
-
-        EmailMode(int value) {
-            this.value = value;
-        }
-
-        /**
-         * Gets value.
-         *
-         * @return the value
-         */
-        public int getValue() {
-            return value;
-        }
+    private Intent getCallingIntent(Context context, CatchoError errorReport) {
+        Intent intent = new Intent(context, mActivity);
+        intent.putExtra(Catcho.ERROR,errorReport);
+        return intent;
     }
-
-
-    /**
-     * The type Builder.
-     */
-    public static class Builder {
-        private WeakReference<Context> context;
-
-        private EmailMode emailMode;
-        private String[] recipients;
-        private String password;
-        private String smtpEmail;
-
-        /**
-         * Instantiates a new Builder.
-         *
-         * @param context the context
-         */
-        public Builder(Context context) {
-            this.context = new WeakReference<>(context);
-        }
-
-        /**
-         * Email mode catcho . builder.
-         *
-         * @param emailMode the email mode
-         * @return the catcho . builder
-         */
-
-        /**
-         * Recipients catcho . builder.
-         *
-         * @param recipients the email
-         * @return the catcho . builder
-         */
-        public Catcho.Builder recipients(String... recipients){
-            this.emailMode = EmailMode.DEFAULT;
-            this.recipients = recipients;
-            return this;
-        }
-
-        /**
-         * G mail sender catcho . builder.
-         *
-         * @param smtpEmail the smtp email
-         * @param password  the password
-         * @return the catcho . builder
-         */
-        private Catcho.Builder gmailSMTPSenderMode(String smtpEmail,String password){
-            this.emailMode = EmailMode.G_MAIL_SENDER;
-            this.smtpEmail = smtpEmail;
-            this.password = password;
-            return this;
-        }
-
-        /**
-         * Build catcho.
-         *
-         * @return the catcho
-         */
-        public Catcho build() {
-            return new Catcho(this);
-        }
-    }
-
 }
