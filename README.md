@@ -48,7 +48,7 @@ Though it is very simple. Copy following line of code in your each (Activity or 
 ```java
        Catcho.Builder(this)
        .recipients("your-email@domain.com")
-       .build());
+       .build();
 
 ```
 
@@ -80,7 +80,7 @@ If you want to change the default activity, then just pass the refrance of your 
 ```java
  Catcho.Builder(this)
        .activity(ACTIVITY.class)
-       .build());
+       .build();
 ```
 
 ```java
