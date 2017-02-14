@@ -18,39 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1139506e-84b8-4919-9b5c-8b9aaef563b4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/alhazmy13/example/catcho/CustomActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_custom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/error/CatchoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/error/CatchoErrorParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/error/DeviceInformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/error/Firmware.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/activation.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/additionnal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mail.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoErrorReport.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/alhazmy13/example/catcho/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/alhazmy13/example/catcho/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build.gradle" afterPath="$PROJECT_DIR$/library/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/Catcho.java" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/Catcho.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoReportActivity.java" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoReportActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTags.java" afterPath="$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTags.java" />
     </list>
     <ignored path="Catcho.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,7 +55,7 @@
       <file leaf-file-name="Catcho.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/Catcho.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
+            <state relative-caret-position="870">
               <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
               <folding>
                 <element signature="e#797#798#0" expanded="true" />
@@ -101,7 +70,7 @@
       <file leaf-file-name="CatchoErrorParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/error/CatchoErrorParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
+            <state relative-caret-position="270">
               <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -166,8 +135,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="44" />
+            <state relative-caret-position="-135">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -176,7 +145,7 @@
       <file leaf-file-name="CatchoTags.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTags.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="270">
               <caret line="18" column="18" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="18" />
               <folding>
                 <element signature="e#637#638#0" expanded="true" />
@@ -191,7 +160,7 @@
       <file leaf-file-name="CatchoReportActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoReportActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="1110">
               <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -2425,7 +2394,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="8922131096000" />
+        <entry key="$PROJECT_DIR$" value="8922228837000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2969,9 +2938,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2991,7 +2961,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2999,14 +2969,9 @@
               <option name="myItemId" value="Catcho" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3396,7 +3361,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="953" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5082645" order="3" side_tool="true" content_ui="tabs" />
@@ -3413,16 +3378,14 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855436" sideWeight="0.4945055" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855436" sideWeight="0.4945055" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32855436" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21306472" sideWeight="0.49173555" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Freeline" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android WiFi ADB" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855436" sideWeight="0.49713877" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3433,6 +3396,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855436" sideWeight="0.49713877" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3495,7 +3460,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3650,7 +3620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3658,7 +3627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3666,7 +3634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3689,7 +3656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="31" column="18" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3718,7 +3684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3737,10 +3702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3748,7 +3709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3756,34 +3716,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding>
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/error/CatchoErrorParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="270">
           <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3791,46 +3729,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="77" column="5" selection-start-line="18" selection-start-column="0" selection-end-line="77" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTest.java" />
     <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/Catcho.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
+        <state relative-caret-position="870">
           <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
           <folding>
             <element signature="e#797#798#0" expanded="true" />
             <element signature="e#839#840#0" expanded="true" />
             <element signature="e#877#878#0" expanded="true" />
             <element signature="e#936#937#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoReportActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3880,9 +3788,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="-135">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoTags.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/net/alhazmy13/catcho/library/CatchoReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
