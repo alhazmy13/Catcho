@@ -17,7 +17,7 @@ Catcho will create an error page kind of mechanism in your android application. 
 You can report any issue on issues page. 
 **Note: If you speak Arabic, you can submit issues with Arabic language and I will check them. :)**
 
-##Installation
+## Installation
 
 **Maven**
 
@@ -37,11 +37,11 @@ dependencies {
 }
 ```
 
-##ScreenShots
+## ScreenShots
 <p align="center">
 <img src="https://cloud.githubusercontent.com/assets/4659608/14599362/9b5b58d2-055f-11e6-9e9f-441069877977.gif"></img></p>
 
-#Usage
+## Usage
 --
 Though it is very simple. Copy following line of code in your each (Activity or BaseActivity) class, just after the call of super method in your overriden onCreate method.
 
@@ -73,7 +73,7 @@ public class AnyActivity extends Activity {
 }
 ```
 
-#Custom Activity
+## Custom Activity
 
 If you want to change the default activity, then just pass the refrance of your activity to catcho and from your activity you can get `CatchoError` serializable object.
 
@@ -116,20 +116,3 @@ You can theme the activity by overwriting the color resources as well as you can
 
 
 
-
-## License
-
-    Copyright 2016 alhazmy
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-    
